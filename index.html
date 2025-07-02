@@ -1,70 +1,30 @@
-
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Youcef TV Player</title>
+  <title>تشغيل تلقائي في xPola Player</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+  <script>
+    // هذا الكود يُنفّذ تلقائيًا عند فتح الصفحة
+    window.onload = function() {
+      // رابط intent لتشغيل الفيديو في xPola
+      window.location.href = "intent://http://dream4k.co:8080/series/109219152973105/fxnfo9ofnx/1317465.ts#Intent;scheme=xmtv;package=com.xpola.player;end";
+    };
+  </script>
   <style>
-    html, body {
+    body {
       margin: 0;
-      padding: 0;
-      background: #000;
-      height: 100%;
-      width: 100%;
-    }
-    #video {
-      width: 100vw;
-      height: 100vh;
-      object-fit: contain;
       background-color: #000;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-family: sans-serif;
     }
   </style>
 </head>
 <body>
-
-<video id="video" controls autoplay></video>
-
-<script>
-  const video = document.getElementById('video');
-
-  // استخراج رابط البث من عنوان URL
-  const urlParams = new URLSearchParams(window.location.search);
-  const streamUrl = urlParams.get('url');
-
-  function requestFullScreen(el) {
-    if (el.requestFullscreen) {
-      el.requestFullscreen();
-    } else if (el.webkitRequestFullscreen) {
-      el.webkitRequestFullscreen();
-    } else if (el.msRequestFullscreen) {
-      el.msRequestFullscreen();
-    }
-  }
-
-  if (streamUrl) {
-    if (Hls.isSupported()) {
-      const hls = new Hls();
-      hls.loadSource(streamUrl);
-      hls.attachMedia(video);
-      hls.on(Hls.Events.MANIFEST_PARSED, function () {
-        video.play();
-        requestFullScreen(video);
-      });
-    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-      video.src = streamUrl;
-      video.addEventListener('loadedmetadata', function () {
-        video.play();
-        requestFullScreen(video);
-      });
-    } else {
-      alert('متصفحك لا يدعم تشغيل هذا النوع من البث.');
-    }
-  } else {
-    alert('⚠️ لم يتم العثور على رابط البث.');
-  }
-</script>
-
+  <p>جاري التحميل في xPola Player...</p>
 </body>
 </html>
