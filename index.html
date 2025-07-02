@@ -2,13 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>تشغيل تلقائي في xPola Player</title>
+  <title>تشغيل تلقائي xPola (مشفر)</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script>
-    // هذا الكود يُنفّذ تلقائيًا عند فتح الصفحة
     window.onload = function() {
-      // رابط intent لتشغيل الفيديو في xPola
-      window.location.href = "intent://http://dream4k.co:8080/series/109219152973105/fxnfo9ofnx/1317465.ts#Intent;scheme=xmtv;package=com.xpola.player;end";
+      // الرابط مشفر بصيغة Base64
+      var encoded = "aHR0cDovL2RyZWFtNGsuY286ODA4MC9zZXJpZXMvMTA5MjE5MTUyOTczMTA1L2Z4bmZvOW9mbngvMTMxNzQ2NS50cw==";
+
+      // فك التشفير
+      var decoded = atob(encoded);
+
+      // توليد رابط intent لتشغيله داخل xPola Player
+      var intentUrl = "intent://" + decoded + "#Intent;scheme=xmtv;package=com.xpola.player;end";
+
+      // توجيه تلقائي
+      window.location.href = intentUrl;
     };
   </script>
   <style>
@@ -25,6 +33,6 @@
   </style>
 </head>
 <body>
-  <p>جاري التحميل في xPola Player...</p>
+  <p>جاري التحميل داخل xPola Player...</p>
 </body>
 </html>
