@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youcef TV - تحميل التطبيق</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header class="header">
+        <img src="images/logo.png" alt="Youcef TV Logo" class="logo hero-logo">
+        <nav class="nav">
+            <ul class="nav-list">
+                <li><a href="#features">الميزات</a></li>
+                <li><a href="#screenshots">لقطات</a></li>
+                <li><a href="#info">معلومات</a></li>
+                <li><a href="#download">تحميل</a></li>
+            </ul>
+            <div class="mobile-menu-toggle" onclick="toggleMenu()">☰</div>
+        </nav>
+    </header>
+    <div id="mobileMenu" class="mobile-menu">
+        <ul>
+            <li><a href="#features">الميزات</a></li>
+            <li><a href="#screenshots">لقطات</a></li>
+            <li><a href="#info">معلومات</a></li>
+            <li><a href="#download">تحميل</a></li>
+        </ul>
+    </div>
+    <main>
+        <section class="hero" id="download">
+            <h1>مرحباً بك في Youcef TV</h1>
+            <p>شاهد القنوات الرياضية والعربية مجاناً</p>
+            <button onclick="downloadYoucefTV()">تحميل التطبيق</button>
+            <button onclick="downloadYPlayer()">تحميل المشغل</button>
+        </section>
+        <section class="features" id="features">
+            <h2>مميزات التطبيق</h2>
+            <div class="features-container">
+                <div class="feature-item">بث مباشر عالي الجودة</div>
+                <div class="feature-item">دعم لجميع القنوات</div>
+                <div class="feature-item">تحديثات مستمرة</div>
+                <div class="feature-item">واجهة سهلة الاستخدام</div>
+            </div>
+        </section>
+        <section class="screenshots" id="screenshots">
+            <h2>لقطات من التطبيق</h2>
+            <div class="screenshots-container">
+                <img src="images/screenshot1.png" alt="screenshot1" class="screenshot-item">
+                <img src="images/screenshot2.png" alt="screenshot2" class="screenshot-item">
+                <img src="images/screenshot3.png" alt="screenshot3" class="screenshot-item">
+            </div>
+        </section>
+        <section class="info" id="info">
+            <h2>معلومات عن التطبيق</h2>
+            <div class="info-card">Youcef TV هو تطبيق يتيح لك مشاهدة القنوات الرياضية والعربية مجاناً بدون تقطيع. يدعم جميع الأجهزة ويحتوي على مشغل مدمج.</div>
+        </section>
+        <section class="newsletter">
+            <h3>اشترك في النشرة الإخبارية</h3>
+            <form class="newsletter-form">
+                <input type="email" placeholder="أدخل بريدك الإلكتروني" required>
+                <button type="submit">اشترك</button>
+            </form>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>© 2024 Youcef TV - جميع الحقوق محفوظة</p>
+        <p>للتواصل: youceftv@example.com</p>
+    </footer>
+</body>
+</html>
