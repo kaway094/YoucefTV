@@ -6,11 +6,11 @@ function toggleMenu() {
 
 // Download Functions
 function downloadYoucefTV() {
-    window.open('https://example.com/youceftv.apk', '_blank');
+  window.open('https://kaway094.github.io/YoucefTV/Youcef%20TV.apk', '_blank');
 }
 
 function downloadYPlayer() {
-    window.open('https://example.com/yplayer.apk', '_blank');
+  window.open('https://kaway094.github.io/YoucefTV/Yplayer%20Pro.apk', '_blank');
 }
 
 // Smooth scrolling for navigation links
